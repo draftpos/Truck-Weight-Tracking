@@ -127,11 +127,13 @@ app_license = "mit"
 
 # DocType Class
 # ---------------
-# Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+doc_events = {
+    "Sales Invoice": {
+        "before_save": "truck_weight_tracking.sales_invoice_hooks.before_save"
+    }
+}
+
 
 # Document Events
 # ---------------
